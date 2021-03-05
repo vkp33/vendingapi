@@ -13,6 +13,7 @@ If you have to run it locally the command is 'npm start'.
 (all use x-www-form-urlencoded)
 
 1. https://vending-machine-project.herokuapp.com/api/drink
+
     -a GET request gets all drinks
 
     -a POST request with body format below creates a new drink 
@@ -26,10 +27,12 @@ If you have to run it locally the command is 'npm start'.
       }
 
 2. https://vending-machine-project.herokuapp.com/api/:id
+
     //a GET request gets the drink with the specified id
     //a DELETE request deletes the drink with the specified id
 
 3. https://vending-machine-project.herokuapp.com/api/drink/update/:id
+
     -a PUT request with body format below updates the whole drink (Note: if any field is left empty it will update the field to empty so use the second update route for updating single fields)
       {
         name: varchar(45),
@@ -41,6 +44,7 @@ If you have to run it locally the command is 'npm start'.
       }
     
 4. https://vending-machine-project.herokuapp.com/api/drink/update/:id/:field
+
     -a PUT request with body below updates a single field
       {
         fieldinheader: new value 
@@ -52,6 +56,7 @@ If you have to run it locally the command is 'npm start'.
       }
     
 5. https://vending-machine-project.herokuapp.com/api/drink/purchase/:id
+
     -a PUT request "purchases" a drink with specified id, reducing it's available stock by 1. 
     
      Example: a PUT request to https://vending-machine-project.herokuapp.com/api/drink/purchase/1 reduces available stock of drink with id 1.
