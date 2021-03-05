@@ -17,6 +17,7 @@ If you have to run it locally the command is 'npm start'.
     -a GET request gets all drinks
 
     -a POST request with body format below creates a new drink 
+    
       {
         name: varchar(45),
         price: (Decimal with max 99.99 and min 0.00,
@@ -28,12 +29,14 @@ If you have to run it locally the command is 'npm start'.
 
 2. https://vending-machine-project.herokuapp.com/api/:id
 
-    //a GET request gets the drink with the specified id
-    //a DELETE request deletes the drink with the specified id
+    -a GET request gets the drink with the specified id
+    
+    -a DELETE request deletes the drink with the specified id
 
 3. https://vending-machine-project.herokuapp.com/api/drink/update/:id
 
     -a PUT request with body format below updates the whole drink (Note: if any field is left empty it will update the field to empty so use the second update route for updating single fields)
+    
       {
         name: varchar(45),
         price: (Decimal with max 99.99 and min 0.00,
@@ -46,11 +49,13 @@ If you have to run it locally the command is 'npm start'.
 4. https://vending-machine-project.herokuapp.com/api/drink/update/:id/:field
 
     -a PUT request with body below updates a single field
+    
       {
         fieldinheader: new value 
       }
       
      Example: change the price of drink with id 1 by sending a PUT request to https://vending-machine-project.herokuapp.com/api/drink/update/1/price and the body would be 
+     
       {
         price: newPrice
       }
